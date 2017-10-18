@@ -1,0 +1,77 @@
+Abstraction
+
+Abstraction means using simple things to represent complexity. In Java, abstraction means using simple concepts like variables, classes and objects to represent more complex code. It allows code to reused and can be used as a useful tool
+
+For Example. you might have a class with a variable being an address. The class might specify each address object shall have a name, street and post code. this can be for different types of people, like an employee, supplier or a customer who are all the objects. 
+
+Encapsulation
+
+Encapsulation encourages security within a class by keeping fields private, and to only access these private fields through public methods. This allows code and data to be kept safe within a class
+
+public class Student {
+ private String name;
+
+ public String getName() {
+  return name;
+
+ 	}
+	 public void setName(String name) {
+	  this.name = name
+ 	}
+}
+
+	class Test {
+ 	public static void main(String[] args) {
+  	Student s = new Student();
+  	s.setName(“adam”);
+  	System.out.println(s.getName());
+ 	}
+}
+
+
+Inheritance
+
+inheritance allows us to create new classes that shares attributes from existing classes. So instead of recreating the same code repeatedly, Java allows us to build on previous work to allow us to reuse it.
+
+
+
+class Animal {
+
+}
+class Cow extends Animal {
+
+}
+
+class cow is a subclass of the parent class Animal.  We use the keyword extends to create a new class that inherits properties from a parent class
+The cow will share some attributes from the parent class Animal for example. most animals will have eyes, ears, legs etc
+
+
+Polymorphism
+Polymorphism lets programmers use the same word to mean different things in different contexts. there are two forms of polymorphism
+
+method overloading
+a method may perform different functions depending on the context its called: A single method might work in different ways depending on the scenario its called upon and the arguments that are passed through.
+
+
+method overriding
+different meaning are implied based on the values supplied by variables
+
+
+example of polymorphism
+
+class Person {
+ void walk() {
+  System.out.println(“Can Run….”);
+ }
+}
+class Employee extends Person {
+ void walk() {
+  System.out.println(“Running Fast…”);
+ }
+ public static void main(String arg[]) {
+  Person p = new Employee(); //upcasting
+  p.walk();
+ }
+}
+
+
