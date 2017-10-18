@@ -11,7 +11,7 @@ public class CheckDiscount {
         Calendar cal = Calendar.getInstance();
 
         // check if the discont applies. change the day to test the discount functionality
-        if (cal.get(Calendar.DAY_OF_WEEK) == Calendar.WEDNESDAY) {
+        if (cal.get(Calendar.DAY_OF_WEEK) == Calendar.TUESDAY) {
 
             discount = true;
         } else {
@@ -24,7 +24,4 @@ public class CheckDiscount {
 
         return discount;
     }
-
-
-
 }

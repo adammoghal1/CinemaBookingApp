@@ -36,11 +36,7 @@ public class CalculateTickets {
         this.totalPrice = totalPrice;
     }
 
-    public int getTotalPrice() {
-        System.out.println(totalPrice);
-
-        return totalPrice;
-    }
+    public int getTotalPrice() { return totalPrice; }
 }
 
 class CalculateDiscountPrice extends CalculateTickets {
