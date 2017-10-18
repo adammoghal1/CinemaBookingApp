@@ -1,0 +1,113 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504
+{\fonttbl\f0\fnil\fcharset0 HelveticaNeue-Bold;\f1\fnil\fcharset0 HelveticaNeue;}
+{\colortbl;\red255\green255\blue255;\red53\green53\blue53;}
+{\*\expandedcolortbl;\csgray\c100000;\cssrgb\c27059\c27059\c27059;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid201\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}
+{\list\listtemplateid4\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid301\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid4}
+{\list\listtemplateid5\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid401\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid5}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}{\listoverride\listid5\listoverridecount0\ls5}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww18100\viewh12620\viewkind0
+\deftab560
+\pard\pardeftab560\pardirnatural\partightenfactor0
+\ls1\ilvl0
+\f0\b\fs24 \cf2 Abstraction
+\f1\b0 \
+\
+Abstraction means using simple things to represent complexity. In Java, abstraction means using simple concepts like variables, classes and objects to represent more complex code. It allows code to reused and can be used as a useful tool\
+\pard\tx720\pardeftab560\pardirnatural\partightenfactor0
+\cf2 \
+\pard\pardeftab560\pardirnatural\partightenfactor0
+\ls2\ilvl0\cf2 For Example. you might have a class with a variable being an address. The class might specify each address object shall have a name, street and post code. this can be for different types of people, like an employee, supplier or a customer who are all the objects\cf2 . \cf2 \
+\pard\tx720\pardeftab560\pardirnatural\partightenfactor0
+\cf2 \
+\pard\pardeftab560\pardirnatural\partightenfactor0
+\ls3\ilvl0
+\f0\b \cf2 Encapsulation\
+\
+\ls3\ilvl0
+\f1\b0 Encapsulation encourages security within a class by keeping fields private, and to only access these private fields through public methods. This allows code and data to be kept safe within a class\
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf2 \
+public class Student \{\
+ private String name;\
+\
+ public String getName() \{\
+  return name;\
+\
+ 	\}\
+	 public void setName(String name) \{\
+	  this.name = name\
+ 	\}\
+\}\
+\
+	class Test \{\
+ 	public static void main(String[] args) \{\
+  	Student s = new Student();\
+  	s.setName(\'93adam\'94);\
+  	System.out.println(s.getName());\
+ 	\}\
+\}\
+\
+\
+\pard\pardeftab560\pardirnatural\partightenfactor0
+\ls4\ilvl0
+\f0\b \cf2 Inheritance\
+\
+\ls4\ilvl0
+\f1\b0 inheritance allows us to create new classes that shares attributes from existing classes. So instead of recreating the same code repeatedly, Java allows us to build on previous work to allow us to reuse it.\
+\
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf2 \
+\
+class Animal \{\
+\
+\}\
+class Cow extends Animal \{\
+\
+\}\
+\
+class cow is a subclass of the parent class Animal. \cf2  We use the keyword\'a0extends\'a0to create a new class that inherits properties from a parent class\
+\cf2 The cow will share some attributes from the parent class Animal for example. most animals will have eyes, ears, legs etc\
+\
+\
+\pard\pardeftab560\pardirnatural\partightenfactor0
+\ls5\ilvl0
+\f0\b \cf2 Polymorphism\
+\ls5\ilvl0
+\f1\b0 Polymorphism lets programmers use the same word to mean different things in different contexts. there are two forms of polymorphism\
+\
+\ls5\ilvl0
+\b method overloading
+\b0 \
+a method may perform different functions depending on the context its called: A single method might work in different ways depending on the scenario its called upon and the arguments that are passed through.\
+\
+\
+\ls5\ilvl0
+\b method overriding
+\b0 \
+different meaning are implied based on the values supplied by variables\
+\
+\
+example of polymorphism\
+\
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf2 class Person \{\
+ void walk() \{\
+  System.out.println(\'93Can Run\'85.\'94);\
+ \}\
+\}\
+class Employee extends Person \{\
+ void walk() \{\
+  System.out.println(\'93Running Fast\'85\'94);\
+ \}\
+ public static void main(String arg[]) \{\
+  Person p = new Employee(); //upcasting\
+  p.walk();\
+ \}\
+\}\
+\
+\
+\
+}
