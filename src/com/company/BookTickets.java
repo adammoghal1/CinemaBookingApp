@@ -33,9 +33,9 @@ public class BookTickets implements CinemaBooking {
                 // check if discount applies
                 if (discount.getDiscount()) {
                     System.out.println("Discount applied");
-
-                    calculateTicket.setTotalPrice(customerTickets);
-                    System.out.println("The total price for the tickets booked is £" + calculateTicket.getTotalPrice());
+                    CalculateDiscountPrice discountPrice = new CalculateDiscountPrice();
+                    discountPrice.setTotalPrice(customerTickets);
+                    System.out.println("The total price for the tickets booked is £" + discountPrice.getTotalPrice());
 
                 } else {
                     System.out.println("discount not applied");
